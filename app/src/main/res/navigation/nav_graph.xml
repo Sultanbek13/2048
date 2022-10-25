@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.sultandev.a2048.ui.fragment.menu.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu"
+        >
+        <action
+            android:id="@+id/action_menuFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.sultandev.a2048.ui.fragment.game.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game"
+        />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.sultandev.a2048.ui.fragment.info.InfoFragment"
+        android:label="InfoFragment"
+        tools:layout="@layout/fragment_info"
+        />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.sultandev.a2048.ui.fragment.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash"
+        >
+        <action
+            android:id="@+id/action_splashFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph"
+            />
+    </fragment>
+</navigation>

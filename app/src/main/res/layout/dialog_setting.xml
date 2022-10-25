@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/app_color"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="12dp"
+    android:layout_gravity="center"
+    >
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rlAction"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            >
+
+            <ImageView
+                android:id="@+id/iconBack"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/margin_small"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tvSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/text_font_new_style"
+                android:gravity="center"
+                android:text="@string/setting"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="@dimen/margin_large">
+
+            <TextView
+                android:id="@+id/tvMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/margin_standard"
+                android:fontFamily="@font/text_font_medium"
+                android:text="@string/music"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/line_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@id/musicSwitch"
+                android:layout_marginHorizontal="@dimen/margin_standard"
+                android:background="@color/white" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/musicSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/margin_large"
+                android:shadowColor="@color/bg_container_color"
+                app:thumbTint="@drawable/bg_switch_thumb"
+                app:trackTint="@drawable/bg_switch_track" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="30dp"
+            android:layout_height="4dp"
+            android:background="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_small"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
